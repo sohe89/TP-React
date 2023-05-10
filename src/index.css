@@ -5,9 +5,102 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+}
+.container{
+height: 50%;
+
+width: 50%;
+margin: 150px;
+padding: 50px;
+background-color: rgb(175, 129, 217);
+}
+button{
+
+  color: rgb(68, 5, 117);
+  align-items: center;
+  margin: 1rem 0;
+  background-color: rgb(199, 186, 186);
+  border: 1px solid gray;
+align-items: center;
+  border-radius:0.5rem ;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+header{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 70px;
+  box-shadow: 1px 1px 3px 3px coral;
+  
+}
+
+header .logo{
+  font-size: 70px;
+  color: blueviolet;
+}
+
+header .display-menu{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+}
+
+.display-menu .menu{
+  padding: 0 15px;
+  text-decoration: none;
+  color: brown;
+
+}
+form{
+
+  display: block;
+  background-color: aqua;
+  box-shadow: 1px 1px 3px 3px;
+  margin: 50px auto;
+  max-width: 600px;
+  max-height: 700px;
+  padding: 25px 60px;
+
+}
+
+form input, textarea{
+
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0;
+  width: 90%;
+  padding: 10px;
+  background-color: rgb(225, 246, 241);
+  border: 1px solid rgb(221, 221, 249);
+  
+
+
+}
+
+form button{
+
+height: 25px;
+width: 60px;
+align-items: center;
+border: none;
+background-color: rgb(139, 216, 249);
+
+
+}
+
+Footer {
+
+margin-top: auto;
+
+
+}
+
+
+
