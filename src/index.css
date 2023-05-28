@@ -1,106 +1,24 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Inter', sans-serif!important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  height: 100%;
+  font-size: 16px!important;
+  line-height: 18px;
+  overflow-x: hidden;
 }
-.container{
-height: 50%;
-
-width: 50%;
-margin: 150px;
-padding: 50px;
-background-color: rgb(175, 129, 217);
+.fw-light {
+  font-weight: 100;
 }
-button{
-
-  color: rgb(68, 5, 117);
-  align-items: center;
-  margin: 1rem 0;
-  background-color: rgb(199, 186, 186);
-  border: 1px solid gray;
-align-items: center;
-  border-radius:0.5rem ;
+.fw-bold {
+  font-weight: 700;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.card-product {
+  width: 100%;
 }
-
-header{
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: 70px;
-  box-shadow: 1px 1px 3px 3px coral;
-  
+.img-product-size {
+  object-fit: contain;
+  max-height: 300px;
+  max-width: 100%;
 }
-
-header .logo{
-  font-size: 70px;
-  color: blueviolet;
-}
-
-header .display-menu{
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-
-}
-
-.display-menu .menu{
-  padding: 0 15px;
-  text-decoration: none;
-  color: brown;
-
-}
-form{
-
-  display: block;
-  background-color: aqua;
-  box-shadow: 1px 1px 3px 3px;
-  margin: 50px auto;
-  max-width: 600px;
-  max-height: 700px;
-  padding: 25px 60px;
-
-}
-
-form input, textarea{
-
-  display: flex;
-  flex-direction: column;
-  margin: 1rem 0;
-  width: 90%;
-  padding: 10px;
-  background-color: rgb(225, 246, 241);
-  border: 1px solid rgb(221, 221, 249);
-  
-
-
-}
-
-form button{
-
-height: 25px;
-width: 60px;
-align-items: center;
-border: none;
-background-color: rgb(139, 216, 249);
-
-
-}
-
-Footer {
-
-margin-top: auto;
-
-
-}
-
-
 

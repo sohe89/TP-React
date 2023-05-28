@@ -1,10 +1,15 @@
-import React from 'react'
+import React from 'react';
+import NavbarStore from './component/NavbarStore';
+import Products from './component/Products';
+
 
 const Minorista = () => {
   return (
-    <div className='container'>
-        Precios por Menor</div>
+  <>
+  <NavbarStore/>
+  <Products/>
+  </>
   )
 }
 
-export default Minorista
+export default Minorista;
