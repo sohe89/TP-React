@@ -20,6 +20,7 @@ const NavbarStore = () => {
           <Nav className="me-auto">
             <Link to={"/"} className="me-2">Home</Link>
             <Link to={"../Products"} className="me-2">Products</Link>
+            <Link to={"../Cart"} className="me-2">Cart</Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

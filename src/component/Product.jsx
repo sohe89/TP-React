@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
-//import { useSelector, useDispatch } from 'react-redux';
-import { addCart } from '../redux/action';
+import { useDispatch } from 'react-redux';
+import {useNavigate} from 'react-router';
+import { addToCart } from '../redux/reducer/cartSlice';
 import {useParams} from 'react-router'; 
 import {NavLink} from 'react-router-dom';
 import Skeleton from 'react-loading-skeleton';
@@ -12,9 +13,12 @@ const [product, setProduct] = useState([]);
 const [loading, setLoading] = useState(false);
 
 //Para redux
-//const dispatch = useDispatch();
-//const addProduct = (product) => {
-//dispatch (addCart(product));}
+const dispatch = useDispatch();
+const navigate = useNavigate();
+const handleAddtoCart = (product) => {
+dispatch (addToCart(product));
+navigate("/cart");
+};
 
 
 useEffect(() => {
@@ -74,7 +78,7 @@ return (
         <div className='d-flex flex-column'>
             <div className='mb-2'>
                 
-            <button className='btn btn-primary'>Add to Cart</button>
+            <button className='btn btn-primary'onClick={()=>handleAddtoCart(product)}>Add to Cart</button>
             </div>
             <div>
             <NavLink to ='/cart' className="btn btn-outline-primary">Go to Cart</NavLink>
