@@ -14,20 +14,34 @@ import NavbarStore from "./component/NavbarStore";
 import Products from "./component/Products";
 import Product from "./component/Product";
 import CartStore from "./component/CartStore";
+import Alert from "./component/Alert";
+import Register from "./component/Register";
+import Login from "./component/Login";
+
+
 
 
 function App() {
   return(
+  
 <>
 <NavbarStore/>
+
 <Routes>
+
         <Route  path="/" element={<HomeStore/>} />
         <Route path="/products" element={<Products/>}/>
         <Route path="/products/:id" element={<Product/>}/>
         <Route path="/cart" element={<CartStore/>}/>
+        <Route path="/Login" element={<Login/>}/>
+        <Route path="/Alert" element={<Alert/>}/>
+        <Route path="/Register" element={<Register/>}/>
+       
 </Routes>
+
 <ToastContainer/>
 <Footer/>
+
 </>
 
   )

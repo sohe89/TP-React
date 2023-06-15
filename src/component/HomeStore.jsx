@@ -1,13 +1,20 @@
 import React from 'react';
+import { useContext } from 'react';
+import { context } from '../context/AuthContext';
+
+
+
 
 function HomeStore(props) {
-    return (
-        <>
-        <h1 class="text-3xl font-bold underline">
-    Hello world!
-  </h1>
-        </>
-    )
+    
+        
+
+  const AuthContext = useContext(context)
+
+  console.log(AuthContext);
+
+        
+    return<div>home</div>
 }
 
 export default HomeStore;
