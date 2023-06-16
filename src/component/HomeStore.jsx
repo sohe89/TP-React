@@ -6,12 +6,12 @@ import { useAuth } from "../context/AuthContext";
 
 export function HomeStore(props) {
     
-const authContext = useAuth()
+const {user} = useAuth()
         
 //creo hoo 
   //const authContext = useContext(context)
 
-  console.log(authContext);
+  console.log(user);
 
         
     return<div>home</div>
