@@ -1,17 +1,17 @@
-import React from 'react';
-import { useContext } from 'react';
-import { context } from '../context/AuthContext';
+// solo este importar
+import { useAuth } from "../context/AuthContext";
 
+//import { useContext } from 'react';
+//import { Context } from '../context/AuthContext';
 
-
-
-function HomeStore(props) {
+export function HomeStore(props) {
     
+const authContext = useAuth()
         
+//creo hoo 
+  //const authContext = useContext(context)
 
-  const AuthContext = useContext(context)
-
-  console.log(AuthContext);
+  console.log(authContext);
 
         
     return<div>home</div>

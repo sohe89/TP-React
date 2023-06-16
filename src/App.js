@@ -17,6 +17,7 @@ import CartStore from "./component/CartStore";
 import Alert from "./component/Alert";
 import Register from "./component/Register";
 import Login from "./component/Login";
+import { AuthProvider} from "./context/AuthContext";
 
 
 
@@ -25,6 +26,7 @@ function App() {
   return(
   
 <>
+<AuthProvider>
 <NavbarStore/>
 
 <Routes>
@@ -38,7 +40,7 @@ function App() {
         <Route path="/Register" element={<Register/>}/>
        
 </Routes>
-
+</AuthProvider>
 <ToastContainer/>
 <Footer/>
 
