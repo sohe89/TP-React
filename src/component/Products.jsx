@@ -21,6 +21,8 @@ useEffect(() => {
         console.log(filter);
         }
         return () => {
+        
+        // eslint-disable-next-line react-hooks/exhaustive-deps
         componentMounted = false;
         }
     }

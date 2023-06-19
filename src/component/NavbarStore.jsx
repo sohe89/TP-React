@@ -10,8 +10,8 @@ const NavbarStore = () => {
     <Navbar bg="light" expand="lg">
       <Container>
       <Navbar.Brand>
-        <Link to={"/"}>
-        La Marca
+        <Link to={"../Login"}>
+         STORE GROUP ONE
         </Link>
         
         </Navbar.Brand>

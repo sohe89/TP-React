@@ -25,7 +25,7 @@ import { AuthProvider} from "./context/AuthContext";
 function App() {
   return(
   
-<>
+<div className="bg-slate-200  text-black center">
 <AuthProvider>
 <NavbarStore/>
 
@@ -44,7 +44,7 @@ function App() {
 <ToastContainer/>
 <Footer/>
 
-</>
+</div>
 
   )
   
