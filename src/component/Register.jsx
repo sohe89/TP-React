@@ -4,6 +4,8 @@ import { useNavigate } from 'react-router-dom';
 
 
 
+
+
 export function Register() {
 
 const [user, setUser] = useState({
@@ -70,13 +72,20 @@ if (error.code ==="auth/invalid-email"){
     name="email" 
     placeholder="ejemploemail@gmail.com"
      onChange={handleChange}/>
+
+
      <div></div>
   <label htmlFor="password">Contraseña</label>
   <input 
   type="password" 
   name="password"
   id="password"
-  onChange={handleChange}/>
+  onChange={handleChange}
+  placeholder='*********'
+  
+  
+  
+  />
 
   <button>Registarme</button>
 
@@ -84,6 +93,12 @@ if (error.code ==="auth/invalid-email"){
 
     </div>
 
+
   )
+
+
+  
   }
+
+  
 export default Register;

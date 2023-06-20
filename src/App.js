@@ -16,6 +16,7 @@ import Product from "./component/Product";
 import CartStore from "./component/CartStore";
 import Alert from "./component/Alert";
 import Register from "./component/Register";
+import { ProtectedRoute } from "./component/ProtectedRoute";
 import Login from "./component/Login";
 import { AuthProvider} from "./context/AuthContext";
 
@@ -31,7 +32,14 @@ function App() {
 
 <Routes>
 
-        <Route  path="/" element={<HomeStore/>} />
+        <Route  path="/" element={
+        
+        <ProtectedRoute>
+            <HomeStore/>  
+        </ProtectedRoute>
+        }
+/>
+
         <Route path="/products" element={<Products/>}/>
         <Route path="/products/:id" element={<Product/>}/>
         <Route path="/cart" element={<CartStore/>}/>

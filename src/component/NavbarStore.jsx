@@ -10,17 +10,21 @@ const NavbarStore = () => {
     <Navbar bg="light" expand="lg">
       <Container>
       <Navbar.Brand>
-        <Link to={"../Login"}>
+        
          STORE GROUP ONE
-        </Link>
+        
         
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Link to={"/"} className="me-2">Home</Link>
-            <Link to={"../Products"} className="me-2">Products</Link>
+
+          <Link to={"/Products"} className="me-2">Products</Link> 
+            
+         
             <Link to={"../Cart"} className="me-2">Cart</Link>
+            <Link to={"/Register"} className="me-2">Registrarte</Link>
+            <Link to={"../Login"} className="me-2">Iniciar Seccion</Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
