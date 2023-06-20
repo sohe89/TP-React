@@ -7,7 +7,7 @@ import Navbar from 'react-bootstrap/Navbar';
 const NavbarStore = () => {
     return (
     <>
-    <Navbar bg="light" expand="lg">
+    <Navbar >
       <Container>
       <Navbar.Brand>
         

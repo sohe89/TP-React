@@ -71,6 +71,7 @@ if (error.code ==="auth/invalid-email"){
    type="email"
     name="email" 
     placeholder="ejemploemail@gmail.com"
+    className='border rounded mb-4 py-3 px-3'
      onChange={handleChange}/>
 
 
@@ -82,6 +83,7 @@ if (error.code ==="auth/invalid-email"){
   id="password"
   onChange={handleChange}
   placeholder='*********'
+  className='border rounded mb-4 py-3 px-3'
   
   
   

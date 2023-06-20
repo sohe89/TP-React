@@ -9,10 +9,12 @@ export function HomeStore() {
       console.log(user) 
 
     const handleLogout = async ()  => {
-
+try{
        await  logout();
        
-
+}catch(error){
+    console.error(error)
+}
 
     };
 
@@ -28,7 +30,7 @@ Hola  {user.displayName +  "   hemos registrado tu email " +user.email + ""} en 
 
 
 </h1>
- {user.photoURL}
+ 
 
 <button onClick={handleLogout}>
 logout

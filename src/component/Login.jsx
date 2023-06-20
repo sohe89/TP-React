@@ -56,32 +56,44 @@ if (error.code ==="auth/invalid-email"){
 
  }
  const handleGoogleSignin = async () => {
-
+try{
 await loginWithGoogle()
 
+
+
+
+
+
 navigate("/");
+ }catch(error){
+  seterror(error.message)
  }
+
+}
  
  
   
   return (
-    <div>
+    <div className="w-full max-w-xs  m-7">
 
 
 
       {error &&<p>{error}</p>} 
-    <form onSubmit={handleSumit}>
-<div></div>
+    <form onSubmit={handleSumit} className='bg-pink shadow-md rounded px-16 pt-6
+    pb-16 mb-4'>
+<div className='mb-4'></div>
 
-  <label htmlFor="email">Email</label>
+  <label htmlFor="email" className='block text-gray-700 tex-xl mb-2 font-fold'>Email</label>
   <input
    type="email"
     name="email" 
     placeholder="ejemploemail@gmail.com"
+    className='border rounded mb-4 py-3 px-3'
      onChange={handleChange}/>
 
 
      <div></div>
+     <div className='mb-4 '>
   <label htmlFor="password">Contraseña</label>
   <input 
   type="password" 
@@ -89,12 +101,13 @@ navigate("/");
   id="password"
   onChange={handleChange}
   placeholder='*********'
+  className='border rounded mb-4 py-3 px-3'
   
   
   
   />
-
-  <button>LOGIN</button>
+</div>
+  <button className='bg-blue-500 hover:bg-blur-700'>LOGIN</button>
 
     </form>
 

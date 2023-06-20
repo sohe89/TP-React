@@ -1,7 +1,9 @@
 import React from 'react'
 
-export default function Alert() {
+function Alert() {
   return (
     <div>Alert</div>
   )
 }
+
+export default Alert
