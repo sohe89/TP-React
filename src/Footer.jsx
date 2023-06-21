@@ -10,7 +10,7 @@ const Footer = () => {
       <div className="row">
         <div className="d-flex justify-content-between align-items-center">
         <div className="">
-          <h5 className="">Productos Gluten Free</h5>
+          <h5 className="">STORE GROUP ONE</h5>
         </div>
         <div className="">
           <Link>Redes</Link>

@@ -28,3 +28,19 @@ body {
   font-weight: bold;
   text-decoration: none;
 }
+.carousel.slide {
+  height: calc(100vh - 136px);
+  overflow: hidden;
+}
+.carousel-caption {
+  position: absolute;
+  right: 15%;
+  bottom: 0px;
+  top: 0px;
+  margin: auto 0px;
+  left: 15%;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  color: #fff;
+  text-align: center;
+}
