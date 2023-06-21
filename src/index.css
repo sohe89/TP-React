@@ -20,5 +20,6 @@ body {
   object-fit: contain;
   max-height: 300px;
   max-width: 100%;
+}#NavbarStore a.active {
+  font-weight: bold;
 }
-
