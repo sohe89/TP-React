@@ -107,7 +107,7 @@ navigate("/");
   
   />
 </div>
-  <button className='bg-blue-500 hover:bg-blur-700'>LOGIN</button>
+  <button className='bg-blue-500 hover:bg-blur-700 py-2 rounded'>LOGIN</button>
 
     </form>
 
