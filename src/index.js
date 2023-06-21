@@ -8,13 +8,14 @@ import {BrowserRouter}  from 'react-router-dom';
 /*Nuevas importaciones*/
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import '../node_modules/font-awesome/css/font-awesome.min.css';
+import { getTotals } from './redux/reducer/cartSlice';
 
 
-
+store.dispatch(getTotals());
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  
+
 <React.StrictMode>
 
   <BrowserRouter>

@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {Link} from "react-router-dom";
-import { addToCart, decreaseCart, removeFromCart } from '../redux/reducer/cartSlice';
+import { addToCart, clearCart, decreaseCart, getTotals, removeFromCart } from '../redux/reducer/cartSlice';
 
 function CartStore() {
     const cart = useSelector((state)=>state.cart);
     const dispatch = useDispatch();
+
+    useEffect(()=>{
+        dispatch(getTotals());
+    }, [cart, dispatch]);
 
     const handleRemoveFromCart = (cartItem) => {
         dispatch(removeFromCart(cartItem));
@@ -16,6 +20,9 @@ function CartStore() {
     }
     const handleIncreaseCart = (cartItem) => {
         dispatch(addToCart(cartItem))
+    }
+    const handleClearCart = () => {
+        dispatch(clearCart())
     }
     return (
         <>
@@ -82,7 +89,7 @@ function CartStore() {
                 <div className='row'>
                     <div className='d-flex'>
                         <div className='w-100'>
-                            <button className='btn- btn-sm btn-outline-primary'>Clear cart</button>
+                            <button className='btn- btn-sm btn-outline-primary' onClick={()=>handleClearCart()}>Clear cart</button>
                         </div>
                         <div className='w-100'>
                             <div>
