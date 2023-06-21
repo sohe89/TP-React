@@ -9,20 +9,24 @@ const NavbarStore = () => {
   const {cartTotalQuantity} = useSelector(state=>state.cart);
     return (
     <>
-    <Navbar bg="light" expand="lg">
+    <Navbar >
       <Container>
       <Navbar.Brand>
-        <Link to={"/"}>
-        La Marca
-        </Link>
+        
+         STORE GROUP ONE
+        
         
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse className="d-flex flex-lg-row justify-content-lg-between align-items-center navbar-nav" id="basic-navbar-nav">
-          <Nav className="d-flex w-100 flex-lg-row justify-content-lg-between align-items-center">
-            <Link to={"../Products"} className="me-2">Products</Link>
-            <Link to={"../Cart"} className="me-2">Cart<span className="badge-light"> {cartTotalQuantity}</span></Link>
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="me-auto">
+
+          <Link to={"/Products"} className="me-2">Products</Link> 
             
+         
+            <Link to={"../Cart"} className="me-2">Cart<span className="badge-light"> {cartTotalQuantity}</span></Link>
+            <Link to={"/Register"} className="me-2">Registrarte</Link>
+            <Link to={"../Login"} className="me-2">Iniciar Seccion</Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
