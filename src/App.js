@@ -1,8 +1,4 @@
-//import Home from "./Home";
-//import Mayorista from "./Mayorista";
-//import Minorista from "./Minorista";
-//import Contacto from "./Contacto"
-//import Navbar from "./Navbar";
+import 'react-loading-skeleton/dist/skeleton.css';
 import "react-toastify/dist/ReactToastify.css";
 import Footer from "./Footer";
 import {Routes, Route } from "react-router-dom";
@@ -21,38 +17,32 @@ import Login from "./component/Login";
 import { AuthProvider} from "./context/AuthContext";
 
 
-
-
 function App() {
   return(
   
-<div className="bg-slate-200  text-black center">
-<AuthProvider>
-<NavbarStore/>
+        <div className="bg-slate-200  text-black center">
+        <AuthProvider>
+        <NavbarStore/>
+        <Routes>
+                <Route  path="/" element={
+                <ProtectedRoute>
+                    <HomeStore/>  
+                </ProtectedRoute>
+                }
+                />
 
-<Routes>
-
-        <Route  path="/" element={
-        
-        <ProtectedRoute>
-            <HomeStore/>  
-        </ProtectedRoute>
-        }
-/>
-
-        <Route path="/products" element={<Products/>}/>
-        <Route path="/products/:id" element={<Product/>}/>
-        <Route path="/cart" element={<CartStore/>}/>
-        <Route path="/Login" element={<Login/>}/>
-        <Route path="/Alert" element={<Alert/>}/>
-        <Route path="/Register" element={<Register/>}/>
-       
-</Routes>
-</AuthProvider>
-<ToastContainer/>
-<Footer/>
-
-</div>
+                <Route path="/products" element={<Products/>}/>
+                <Route path="/products/:id" element={<Product/>}/>
+                <Route path="/cart" element={<CartStore/>}/>
+                <Route path="/Login" element={<Login/>}/>
+                <Route path="/Alert" element={<Alert/>}/>
+                <Route path="/Register" element={<Register/>}/>
+              
+        </Routes>
+        </AuthProvider>
+        <ToastContainer/>
+        <Footer/>
+        </div>
 
   )
   
