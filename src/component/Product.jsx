@@ -15,6 +15,7 @@ const [loading, setLoading] = useState(false);
 //Para redux
 const dispatch = useDispatch();
 const navigate = useNavigate();
+
 const handleAddtoCart = (product) => {
 dispatch (addToCart(product));
 navigate("/cart");
